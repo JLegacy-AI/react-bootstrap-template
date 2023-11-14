@@ -1,6 +1,6 @@
 import React from "react";
 
-import AUCTION_1 from "../assets/auction-1.png";
+import DISCOVER_1 from "../assets/auction-1.png";
 import AUCTION_2 from "../assets/auction-2.png";
 import AUCTION_3 from "../assets/auction-3.png";
 import AUCTION_4 from "../assets/auction-4.png";
@@ -13,7 +13,7 @@ const DiscoverCard = ({ bid, item }) => {
         width: "18rem",
       }}
     >
-      <img src={AUCTION_1} className="card-img-top" alt="..." />
+      <img src={DISCOVER_1} className="card-img-top" alt="..." />
       <div className="card-body">
         <div className="w-100 d-flex justify-content-between">
           {item.map((i, index) => {
@@ -49,9 +49,9 @@ const DiscoverCard = ({ bid, item }) => {
   );
 };
 
-const auctionItems = [
+const discoverItems = [
   {
-    imageUrl: AUCTION_1,
+    imageUrl: DISCOVER_1,
     item: [
       {
         name: "Lorem Ipsum",
@@ -61,7 +61,7 @@ const auctionItems = [
     bid: "Ends in 01.34.45",
   },
   {
-    imageUrl: AUCTION_1,
+    imageUrl: DISCOVER_1,
     item: [
       {
         name: "Lorem Ipsum",
@@ -71,7 +71,7 @@ const auctionItems = [
     bid: "Ends in 01.34.45",
   },
   {
-    imageUrl: AUCTION_1,
+    imageUrl: DISCOVER_1,
     item: [
       {
         name: "Lorem Ipsum",
@@ -81,7 +81,7 @@ const auctionItems = [
     bid: "Ends in 01.34.45",
   },
   {
-    imageUrl: AUCTION_1,
+    imageUrl: DISCOVER_1,
     item: [
       {
         name: "Lorem Ipsum",
@@ -91,7 +91,7 @@ const auctionItems = [
     bid: "Ends in 01.34.45",
   },
   {
-    imageUrl: AUCTION_1,
+    imageUrl: DISCOVER_1,
     item: [
       {
         name: "Lorem Ipsum",
@@ -101,7 +101,7 @@ const auctionItems = [
     bid: "Ends in 01.34.45",
   },
   {
-    imageUrl: AUCTION_1,
+    imageUrl: DISCOVER_1,
     item: [
       {
         name: "Lorem Ipsum",
@@ -111,7 +111,7 @@ const auctionItems = [
     bid: "Ends in 01.34.45",
   },
   {
-    imageUrl: AUCTION_1,
+    imageUrl: DISCOVER_1,
     item: [
       {
         name: "Lorem Ipsum",
@@ -121,7 +121,7 @@ const auctionItems = [
     bid: "Ends in 01.34.45",
   },
   {
-    imageUrl: AUCTION_1,
+    imageUrl: DISCOVER_1,
     item: [
       {
         name: "Lorem Ipsum",
@@ -174,7 +174,7 @@ export function Discover() {
         </div>
       </div>
       <div className="w-100 d-flex justify-content-evenly row">
-        {auctionItems.map((items, index) => {
+        {discoverItems.map((items, index) => {
           return (
             <>
               <DiscoverCard {...items} />
