@@ -40,7 +40,7 @@ const Navbar = () => {
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          <img src={LOGO} alt="" />
+          <img src={LOGO} alt="LOGO" />
         </a>
         <div
           className="collapse navbar-collapse d-flex w-100 justify-content-center"

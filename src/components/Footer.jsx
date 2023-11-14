@@ -55,7 +55,7 @@ function Footer() {
       <div className="w-100 px-5 pb-5 pt-3 d-flex justify-content-between ">
         <div className="d-flex col-4">
           {socialMedia.map((url, index) => {
-            return <img key={index} src={url} />;
+            return <img key={index} src={url} alt="INSTAGARAM" />;
           })}
         </div>
         <div>

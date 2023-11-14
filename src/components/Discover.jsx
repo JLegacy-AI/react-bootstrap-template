@@ -17,7 +17,7 @@ const DiscoverCard = ({ bid, item, imageUrl }) => {
         width: "18rem",
       }}
     >
-      <img src={imageUrl} className="card-img-top" alt="..." />
+      <img src={imageUrl} className="card-img-top" alt="Discover Card" />
       <div className="card-body">
         <div className="w-100 d-flex justify-content-between">
           {item.map((i, index) => {
@@ -44,6 +44,7 @@ const DiscoverCard = ({ bid, item, imageUrl }) => {
             style={{
               width: "100px",
             }}
+            type="button"
           >
             Buy
           </button>
@@ -148,28 +149,24 @@ export function Discover() {
         <h1 className="text-white">Discover</h1>
         <div>
           <button
-            role="button"
             type="button"
             className="btn btn-link text-white text-decoration-none "
           >
             Category
           </button>
           <button
-            role="button"
             type="button"
             className="btn btn-link text-white text-decoration-none "
           >
             Cheapest
           </button>
           <button
-            role="button"
             type="button"
             className="btn btn-link text-white text-decoration-none "
           >
             Newest
           </button>
           <button
-            role="button"
             type="button"
             className="btn btn-success text-white text-decoration-none "
             style={{

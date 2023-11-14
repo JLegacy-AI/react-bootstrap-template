@@ -39,6 +39,7 @@ const AuctionCard = ({ bid, item, imageUrl }) => {
             style={{
               width: "100px",
             }}
+            type="button"
           >
             Buy
           </button>
@@ -101,7 +102,7 @@ const Auctions = () => {
         }}
       >
         <h1 className="text-white">Hot auctions</h1>
-        <button role="button" type="button" className="btn btn-link text-white">
+        <button type="button" className="btn btn-link text-white">
           View all
         </button>
       </div>
