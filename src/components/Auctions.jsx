@@ -4,7 +4,7 @@ import AUCTION_2 from "../assets/auction-2.png";
 import AUCTION_3 from "../assets/auction-3.png";
 import AUCTION_4 from "../assets/auction-4.png";
 
-const AuctionCard = ({}) => {
+const AuctionCard = ({ bid, item }) => {
   return (
     <div
       className="card bg-transparent text-white"
@@ -15,12 +15,25 @@ const AuctionCard = ({}) => {
       <img src={AUCTION_1} className="card-img-top" alt="..." />
       <div className="card-body">
         <div className="w-100 d-flex justify-content-between">
-          <h5 className="card-title bg-transparent ">Lorem Ipsum</h5>
-          <p className="card-text">1.20 Weth</p>
+          {item.map((i, index) => {
+            return (
+              <>
+                <h5 className="card-title bg-transparent ">{i.name}</h5>
+                <p className="card-text">{i.value}</p>
+              </>
+            );
+          })}
         </div>
         <hr />
         <div className="w-100 d-flex justify-content-between">
-          <h5 className="card-title bg-transparent ">Lorem Ipsum</h5>
+          <h5
+            className="bg-transparent text-secondary  fw-normal  "
+            style={{
+              fontSize: "12px",
+            }}
+          >
+            {bid}
+          </h5>
           <button
             className="btn btn-outline-light"
             style={{
@@ -82,7 +95,7 @@ const Auctions = () => {
   return (
     <div className="w-100 d-flex justify-content-center flex-column align-items-center ">
       <div
-        className="d-flex justify-content-between w-75"
+        className="d-flex justify-content-between w-100 px-5"
         style={{
           height: "100px",
         }}
@@ -96,7 +109,7 @@ const Auctions = () => {
         {auctionItems.map((items, index) => {
           return (
             <>
-              <AuctionCard />
+              <AuctionCard {...items} />
             </>
           );
         })}
