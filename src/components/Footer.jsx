@@ -6,9 +6,13 @@ const FooterNavItems = ({ name, items }) => {
     <>
       <div className="col-4 text-white">
         <h1>{name}</h1>
-        <div>
+        <div className="d-flex flex-column">
           {items.map((item) => {
-            return <p>{item}</p>;
+            return (
+              <a className="text-white text-decoration-none py-2" href="/">
+                {item}
+              </a>
+            );
           })}
         </div>
       </div>
@@ -26,7 +30,7 @@ const footerNavs = [
     items: ["About Us", "Service", "Portfolio"],
   },
   {
-    name: "Marketplace",
+    name: "Contact",
     items: ["Facebook", "Instagram", "Twitter", "Email"],
   },
 ];
@@ -35,7 +39,7 @@ const socialMedia = [INSTAGRAM, INSTAGRAM, INSTAGRAM];
 
 function Footer() {
   return (
-    <div className="w-100 row">
+    <div className="w-100 row mt-5">
       <div className="col-4 ">
         <p className="fs-3 text-white ps-5">
           Etiam et id tincidunt faucibus mollis a sociis pretium fermentum quis
@@ -47,12 +51,15 @@ function Footer() {
           return <FooterNavItems {...nav} />;
         })}
       </div>
-      <hr />
-      <div className="w-100 px-5 py-5">
+      <hr className="border" />
+      <div className="w-100 px-5 pb-5 pt-3 d-flex justify-content-between ">
         <div className="d-flex col-4">
           {socialMedia.map((url, index) => {
             return <img key={index} src={url} />;
           })}
+        </div>
+        <div>
+          <p className="text-white">Copyright 2021 JLegacy-AI</p>
         </div>
       </div>
     </div>

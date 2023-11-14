@@ -4,7 +4,7 @@ import AUCTION_2 from "../assets/auction-2.png";
 import AUCTION_3 from "../assets/auction-3.png";
 import AUCTION_4 from "../assets/auction-4.png";
 
-const AuctionCard = ({ bid, item }) => {
+const AuctionCard = ({ bid, item, imageUrl }) => {
   return (
     <div
       className="card bg-transparent text-white"
@@ -12,7 +12,7 @@ const AuctionCard = ({ bid, item }) => {
         width: "18rem",
       }}
     >
-      <img src={AUCTION_1} className="card-img-top" alt="..." />
+      <img src={imageUrl} className="card-img-top" alt="..." />
       <div className="card-body">
         <div className="w-100 d-flex justify-content-between">
           {item.map((i, index) => {
@@ -60,7 +60,7 @@ const auctionItems = [
     bid: "Ends in 01.34.45",
   },
   {
-    imageUrl: AUCTION_1,
+    imageUrl: AUCTION_2,
     item: [
       {
         name: "Lorem Ipsum",
@@ -70,7 +70,7 @@ const auctionItems = [
     bid: "Ends in 01.34.45",
   },
   {
-    imageUrl: AUCTION_1,
+    imageUrl: AUCTION_3,
     item: [
       {
         name: "Lorem Ipsum",
@@ -80,7 +80,7 @@ const auctionItems = [
     bid: "Ends in 01.34.45",
   },
   {
-    imageUrl: AUCTION_1,
+    imageUrl: AUCTION_4,
     item: [
       {
         name: "Lorem Ipsum",
